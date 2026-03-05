@@ -1,1 +1,110 @@
+<svg width="900" height="580" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
 
+  <!-- Background -->
+  <rect width="900" height="580" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a237e">ER Diagram – College Club Membership Management</text>
+  <line x1="60" y1="48" x2="840" y2="48" stroke="#1a237e" stroke-width="1.5"/>
+
+  <!-- ===== STUDENT ENTITY ===== -->
+  <!-- Entity box -->
+  <rect x="60" y="80" width="220" height="44" rx="4" fill="#1565c0" stroke="#0d47a1" stroke-width="2"/>
+  <text x="170" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="white">STUDENT</text>
+
+  <!-- Attributes -->
+  <!-- PK -->
+  <ellipse cx="100" cy="175" rx="55" ry="22" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="100" y="172" text-anchor="middle" font-size="12" fill="#0d47a1" font-weight="bold" text-decoration="underline">StudentID</text>
+  <text x="100" y="184" text-anchor="middle" font-size="9" fill="#1565c0">(PK)</text>
+  <!-- Line PK -->
+  <line x1="100" y1="153" x2="130" y2="124" stroke="#1565c0" stroke-width="1.2"/>
+
+  <!-- StudentName -->
+  <ellipse cx="185" cy="175" rx="58" ry="22" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="185" y="179" text-anchor="middle" font-size="12" fill="#0d47a1">StudentName</text>
+  <line x1="185" y1="153" x2="180" y2="124" stroke="#1565c0" stroke-width="1.2"/>
+
+  <!-- Email -->
+  <ellipse cx="272" cy="175" rx="42" ry="22" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="272" y="179" text-anchor="middle" font-size="12" fill="#0d47a1">Email</text>
+  <line x1="268" y1="153" x2="230" y2="124" stroke="#1565c0" stroke-width="1.2"/>
+
+  <!-- ===== CLUB ENTITY ===== -->
+  <rect x="620" y="80" width="220" height="44" rx="4" fill="#1b5e20" stroke="#145a14" stroke-width="2"/>
+  <text x="730" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="white">CLUB</text>
+
+  <!-- ClubID PK -->
+  <ellipse cx="632" cy="175" rx="42" ry="22" fill="#e8f5e9" stroke="#1b5e20" stroke-width="1.5"/>
+  <text x="632" y="172" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold" text-decoration="underline">ClubID</text>
+  <text x="632" y="184" text-anchor="middle" font-size="9" fill="#1b5e20">(PK)</text>
+  <line x1="648" y1="153" x2="680" y2="124" stroke="#1b5e20" stroke-width="1.2"/>
+
+  <!-- ClubName -->
+  <ellipse cx="718" cy="175" rx="50" ry="22" fill="#e8f5e9" stroke="#1b5e20" stroke-width="1.5"/>
+  <text x="718" y="179" text-anchor="middle" font-size="12" fill="#1b5e20">ClubName</text>
+  <line x1="718" y1="153" x2="726" y2="124" stroke="#1b5e20" stroke-width="1.2"/>
+
+  <!-- ClubRoom -->
+  <ellipse cx="802" cy="175" rx="50" ry="22" fill="#e8f5e9" stroke="#1b5e20" stroke-width="1.5"/>
+  <text x="802" y="179" text-anchor="middle" font-size="12" fill="#1b5e20">ClubRoom</text>
+  <line x1="795" y1="153" x2="770" y2="124" stroke="#1b5e20" stroke-width="1.2"/>
+
+  <!-- ClubMentor -->
+  <ellipse cx="730" cy="240" rx="54" ry="22" fill="#e8f5e9" stroke="#1b5e20" stroke-width="1.5"/>
+  <text x="730" y="244" text-anchor="middle" font-size="12" fill="#1b5e20">ClubMentor</text>
+  <line x1="730" y1="218" x2="730" y2="124" stroke="#1b5e20" stroke-width="1.2"/>
+
+  <!-- ===== MEMBERSHIP RELATIONSHIP (diamond) ===== -->
+  <!-- Diamond shape -->
+  <polygon points="450,280 530,330 450,380 370,330" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="450" y="325" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a148c">MEMBERSHIP</text>
+  <text x="450" y="341" text-anchor="middle" font-size="10" fill="#6a1b9a">(Relationship)</text>
+
+  <!-- JoinDate attribute on Membership -->
+  <ellipse cx="450" cy="430" rx="46" ry="22" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="450" y="434" text-anchor="middle" font-size="12" fill="#4a148c">JoinDate</text>
+  <line x1="450" y1="380" x2="450" y2="408" stroke="#6a1b9a" stroke-width="1.2"/>
+
+  <!-- FK StudentID on Membership -->
+  <ellipse cx="330" cy="430" rx="55" ry="22" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="330" y="427" text-anchor="middle" font-size="12" fill="#4a148c" text-decoration="underline">StudentID</text>
+  <text x="330" y="439" text-anchor="middle" font-size="9" fill="#6a1b9a">(FK)</text>
+  <line x1="370" y1="355" x2="354" y2="410" stroke="#6a1b9a" stroke-width="1.2"/>
+
+  <!-- FK ClubID on Membership -->
+  <ellipse cx="570" cy="430" rx="42" ry="22" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="570" y="427" text-anchor="middle" font-size="12" fill="#4a148c" text-decoration="underline">ClubID</text>
+  <text x="570" y="439" text-anchor="middle" font-size="9" fill="#6a1b9a">(FK)</text>
+  <line x1="530" y1="355" x2="551" y2="410" stroke="#6a1b9a" stroke-width="1.2"/>
+
+  <!-- ===== RELATIONSHIP LINES ===== -->
+  <!-- Student to Membership -->
+  <line x1="280" y1="102" x2="370" y2="310" stroke="#333" stroke-width="2"/>
+  <!-- Cardinality labels -->
+  <text x="295" y="195" font-size="13" fill="#c62828" font-weight="bold">1</text>
+  <text x="358" y="295" font-size="13" fill="#c62828" font-weight="bold">M</text>
+
+  <!-- Club to Membership -->
+  <line x1="620" y1="102" x2="530" y2="310" stroke="#333" stroke-width="2"/>
+  <text x="597" y="195" font-size="13" fill="#c62828" font-weight="bold">1</text>
+  <text x="533" y="295" font-size="13" fill="#c62828" font-weight="bold">M</text>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="60" y="490" width="780" height="70" rx="6" fill="#fff" stroke="#bbb" stroke-width="1"/>
+  <text x="450" y="510" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Legend</text>
+
+  <rect x="80" y="520" width="18" height="14" fill="#1565c0"/>
+  <text x="104" y="532" font-size="11" fill="#333">Entity (Strong)</text>
+
+  <polygon points="200,519 230,527 200,535 170,527" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="238" y="532" font-size="11" fill="#333">Relationship</text>
+
+  <ellipse cx="355" cy="527" rx="28" ry="11" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="355" y="531" text-anchor="middle" font-size="10" fill="#333" text-decoration="underline">Attr</text>
+  <text x="390" y="532" font-size="11" fill="#333">Attribute (underline = PK)</text>
+
+  <text x="570" y="532" font-size="12" fill="#c62828" font-weight="bold">1 / M</text>
+  <text x="598" y="532" font-size="11" fill="#333"> = Cardinality (One-to-Many)</text>
+
+</svg>
